@@ -1,6 +1,14 @@
+🚀 Stack
+Framework: FastAPI (Python)
+Database: PostgreSQL or Firebase
+Deployment: Railway
+🎯 Endpoints
+POST /api/chat: Send messages to the AI
+GET /api/health: Server status
 Backend - Apocalypse Shema
 API REST pour le traitement des requêtes et l'intégration IA.
 
+=================French===========================
 🚀 Stack
 Framework : FastAPI (Python)
 Base de données : PostgreSQL or Firebase
