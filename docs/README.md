@@ -14,12 +14,12 @@ To maintain a single source of truth for the team.
 
 =========French=========<br />
 
-Documentation - Apocalypse Shema
-Spécifications techniques et ressources théologiques.
+Documentation - Apocalypse Shema<br />
+Spécifications techniques et ressources théologiques.<br />
 
-📖 Sections
-/technical/ : Architecture, API, déploiement
-/theological/ : Références exégétiques, validation doctrinale
-/meetings/ : Comptes-rendus de réunions
-🎯 Objectif
+📖 Sections<br />
+/technical/ : Architecture, API, déploiement<br />
+/theological/ : Références exégétiques, validation doctrinale<br />
+/meetings/ : Comptes-rendus de réunions<br />
+🎯 Objectif<br />
 Maintenir une source unique de vérité pour l'équipe.
