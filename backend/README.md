@@ -16,15 +16,15 @@ GET /api/health: Server status
 
 ===============French=======<br />
 Backend - Apocalypse Shema
-API REST pour le traitement des requêtes et l'intégration IA.
+API REST pour le traitement des requêtes et l'intégration IA.<br />
 
-🚀 Stack
-Framework : FastAPI (Python)
-Base de données : PostgreSQL or Firebase
-Deploy : Railway
-🎯 Endpoints
-POST /api/chat : Envoi de messages à l'IA
-GET /api/health : Statut du serveur
-📦 Installation
-pip install -r requirements.txt
-uvicorn app.main:app –reload
+🚀 Stack<br />
+Framework : FastAPI (Python)<br />
+Base de données : PostgreSQL or Firebase<br />
+Deploy : Railway<br />
+🎯 Endpoints<br />
+POST /api/chat : Envoi de messages à l'IA<br />
+GET /api/health : Statut du serveur<br />
+📦 Installation<br />
+pip install -r requirements.txt<br />
+uvicorn app.main:app –reload<br />
