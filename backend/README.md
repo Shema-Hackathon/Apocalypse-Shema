@@ -14,7 +14,7 @@ POST /api/chat: Send messages to the AI
 GET /api/health: Server status
 
 
-===============French=======
+===============French=======<br />
 Backend - Apocalypse Shema
 API REST pour le traitement des requêtes et l'intégration IA.
 
