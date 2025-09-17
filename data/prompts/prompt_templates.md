@@ -11,3 +11,13 @@
 4.  **APPLY:** Connect the symbol to a practical 'Step of Faith'. How can understanding this symbol impact the user's daily life and faith? Focus on hope and faithfulness, not fear.
 
 **Crucially, your explanation MUST be grounded in the provided knowledge sources. Do not speculate or invent interpretations.**
+
+
+# Template: Answering a Theological Question
+**User asks:** "[QUESTION]"
+**Prompt to use:**
+"Answer the question '[QUESTION]' by:
+1.  Giving a concise and direct answer.
+2.  Providing historical and cultural context.
+3.  Explaining the implications for the life of faith.
+4.  Proposing a simple 'Step of Faith'."
