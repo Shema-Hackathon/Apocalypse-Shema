@@ -1,22 +1,5 @@
-🚀 Stack
-Framework: FastAPI (Python)
-Database: PostgreSQL or Firebase
-Deployment: Railway
-🎯 Endpoints
-POST /api/chat: Send messages to the AI
-GET /api/health: Server status
-Backend - Apocalypse Shema
-API REST pour le traitement des requêtes et l'intégration IA.
+# 📁 Data Directory
 
-=================French===========================
-🚀 Stack
-Framework : FastAPI (Python)
-Base de données : PostgreSQL or Firebase
-Deploy : Railway
-🎯 Endpoints
-POST /api/chat : Envoi de messages à l'IA
-GET /api/health : Statut du serveur
-📦 Installation
-pip install -r requirements.txt
-uvicorn app.main:app –reload
-Apocalypse-Shema/data/README.md at main · Mpolo-hub/Apocalypse-Shema
+This directory is the **centralized knowledge base** for the Apocalypse Shema project. It contains all the theological sources, structured data, and AI prompts that power the conversational experience.
+
+## 🗂️ Structure
