@@ -1,0 +1,88 @@
+RAPPORT DE PROJET - HACK GLOO
+Date de Génération : 19 Septembre 2025
+Prochaine Réunion : Dimanche 21 Septembre, 19h00 (UTC+1)
+
+1. Fiche Projet
+Nom du Projet	Apocalypse-Shema
+Signification	"Écoute", en hébreu (Deutéronome 6:4)
+Description	Shema est un compagnon IA qui transforme la méditation biblique d'une lecture passive en un dialogue interactif et personnalisé. Il guide l'utilisateur de la compréhension à l'application concrète ("Step of Faith") de sa foi au quotidien, en se basant sur son contexte émotionnel et spirituel.
+Lien GitHub	https://github.com/Shema-Hackathon
+Lien Discord	https://discord.gg/35caMfYW
+Lien Design Figma	Non fourni dans le brief initial
+2. Équipe (5 personnes)
+Nom	Rôle Principal
+Emma Diaka	IT Full Stack, Designer (Backend + Frontend)
+Ishmael	Full Stack, AI (Backend + Frontend)
+Junior Mpolo	IT Full Stack, Data Scientist (en progression) (Backend + Frontend)
+Jules Diaka	AI, Designer
+Gires Nombo	Expert exégèse
+3. Comment ça marche ? (Expérience Utilisateur)
+Check-in & Contextualisation :
+
+Shema demande : "Comment te sens-tu aujourd'hui ?" ou "Qu'est-ce qui occupe ton esprit en ce moment ?".
+
+L'utilisateur peut aussi choisir un passage biblique directement.
+
+Dialogue Guidé avec l'IA :
+
+L'IA analyse l'entrée de l'utilisateur et le passage biblique (choisi ou proposé).
+
+La conversation est structurée en trois phases :
+
+Compréhension : Ex: "Que penses-tu que ce passage nous dit sur le caractère de Dieu ?"
+
+Réflexion : Ex: "En quoi cela répond-il à la préoccupation que tu as partagée plus tôt ?"
+
+Application : Ex: "Quelle serait une petite étape concrète que tu pourrais faire aujourd'hui pour vivre cela ?"
+
+Génération d'un "Step of Faith" :
+
+Synthèse de la conversation par l'IA.
+
+Proposition d'une action unique et personnalisée que l'utilisateur peut accepter et planifier.
+
+Exemple : "Today's Step of Faith : Envoyer un message d'encouragement à Paul, en lui disant spécifiquement que tu pries pour sa situation familiale."
+
+4. Feuille de Route & Calendrier
+Semaine	Objectif	Tâches Clés
+Semaine 1	Setup technique + design IA	Curration des données, Ingénierie des prompts, Setup des outils.
+Semaine 2	Développement backend + frontend	Build du backend (API), build du frontend (UI de chat), intégration design.
+Semaine 3	Intégration IA + tests	Ajout des features clés (Step of Faith, API biblique), tests intensifs.
+Semaine 4	Finalisation + pitch	Déploiement, polish, préparation de la démo vidéo et du pitch.
+5. État d'Avancement Détaillé
+Phase 1 : Le Cœur de l'IA (Semaines 1-2) - EN COURS
+[FAIT] Setup des environnements techniques (GitHub, Discord, Figma).
+
+[FAIT] Design initial de l'IA (Figma/HTML).
+
+[FAIT] Création et test de l'API backend avec FastAPI (/api/chat).
+
+[FAIT] Intégration initiale avec Gloo API (Nom: Apocalypse-Shema).
+
+[FAIT] Création des prompts systèmes.
+
+PROCHAINES ÉTAPES : Curration et nettoyage des données exégétiques.
+
+Phase 2 : L'Interface Utilisateur (Semaine 2-3) - À VENIR
+À FAIRE : Build du composant de chat frontend (React/Next.js).
+
+À FAIRE : Connexion du frontend à l'API /api/chat.
+
+À FAIRE : Application du styling Tailwind CSS depuis Figma.
+
+Phase 3 : Features Clés & Polish (Semaine 3-4) - À VENIR
+À FAIRE : Développement de la fonctionnalité "Step of Faith" (prompt, stockage, UI).
+
+À FAIRE : Intégration d'une API Biblique (Gloo) pour récupérer les textes.
+
+À FAIRE : Tests finaux, déploiement sur Vercel/Railway, préparation du pitch.
+
+6. Stack Technique
+Composant	Technologies Choisies
+Frontend	React, Next.js, Tailwind CSS, Vercel
+Backend	Python + FastAPI
+Base de Données	PostgreSQL (Railway)
+IA/ML	Gloo API (API: Apocalypse-Shema), Hugging Face, LangChain
+Design	Figma
+Version Control	GitHub
+Communication	Discord
