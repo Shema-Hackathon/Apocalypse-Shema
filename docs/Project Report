@@ -1,0 +1,74 @@
+PROJECT REPORT - HACK GLOO
+Generation Date: September 19, 2025
+Next Meeting: Sunday, September 21, 7:00 PM (UTC+1)
+________________________________________
+1. Project Brief
+Project Name	Apocalypse-Shema
+Meaning	"Hear" or "Listen", in Hebrew (Deuteronomy 6:4)
+Description	Shema is an AI companion that transforms biblical meditation from passive reading into an interactive and personalized dialogue. It guides the user from understanding to practical application ("Step of Faith") in their daily life, based on their current emotional and spiritual context.
+GitHub Link	https://github.com/Shema-Hackathon
+
+Discord Link	https://discord.gg/35caMfYW
+
+Figma Design Link	Not provided in the initial brief
+________________________________________
+2. Team (5 People)
+Name	Primary Role
+Emma Diaka	IT Full Stack, Designer (Backend + Frontend)
+Ishmael	Full Stack, AI (Backend + Frontend)
+Junior Mpolo	IT Full Stack, Data Scientist (in training) (Backend + Frontend)
+Jules Diaka	AI, Designer
+Gires Nombo	Exegesis Expert
+________________________________________
+3. How It Works (User Experience)
+1.	Check-in & Contextualization:
+o	Shema asks: "How are you feeling today?" or "What's on your mind right now?".
+o	The user can also directly choose a biblical passage.
+2.	Guided Dialogue with AI:
+o	The AI analyzes the user's input and the biblical passage (chosen or suggested).
+o	The conversation is structured in three phases:
+o	Comprehension: Ex: "What do you think this passage tells us about God's character?"
+o	Reflection: Ex: "How does this respond to the concern you shared earlier?"
+o	Application: Ex: "What is one small, practical step you could take today to live this out?"
+3.	"Step of Faith" Generation:
+o	The AI synthesizes the conversation.
+o	It proposes a unique, personalized action that the user can accept and schedule.
+o	Example: "Today's Step of Faith: Send an encouraging message to Paul, specifically telling him you're praying for his family situation."
+________________________________________
+4. Roadmap & Schedule
+Week	Objective	Key Tasks
+Week 1	Technical setup + AI design	Data curation, Prompt engineering, Tool setup.
+Week 2	Backend + frontend development	Build backend (API), build frontend (Chat UI), design integration.
+Week 3	AI integration + testing	Adding key features (Step of Faith, Bible API), intensive testing.
+Week 4	Finalization + pitch	Deployment, polish, demo video and pitch preparation.
+________________________________________
+5. Detailed Progress Status
+Phase 1: The AI Core (Weeks 1-2) - IN PROGRESS
+•	[DONE] Technical environment setup (GitHub, Discord, Figma).
+•	[DONE] Initial AI design (Figma/HTML) : (Template : https://github.com/Shema-Hackathon/Apocalypse-Shema/blob/main/frontend/src/pages/apocalypsis.html)
+•	[DONE] Creation and testing of the backend API with FastAPI (/api/chat).
+•	[DONE] Initial integration with Gloo API (Name: Apocalypse-Shema). (https://studio.ai.gloo.com/),
+•	[DONE] Creation of system prompts (https://github.com/Shema-Hackathon/Apocalypse-Shema/tree/main/data/prompts).
+•	NEXT STEPS: Curation and cleaning of exegetical data.
+Phase 2: User Interface (Week 2-3) - UPCOMING
+•	TO DO: Build the frontend chat component (React/Next.js).
+•	TO DO: Connect the frontend to the /api/chat API.
+•	TO DO: Apply Tailwind CSS styling from Figma.
+Phase 3: Key Features & Polish (Week 3-4) - UPCOMING
+•	TO DO: Develop the "Step of Faith" feature (prompt, storage, UI).
+•	TO DO: Integrate a Bible API (Gloo) to fetch scriptures.
+•	TO DO: Final testing, deployment to Vercel/Railway, pitch preparation.
+________________________________________
+6. Technical Stack
+Component	Chosen Technologies
+Frontend	React, Next.js, Tailwind CSS, Vercel
+Backend	Python + FastAPI
+Database	PostgreSQL (Railway)
+AI/ML	Gloo API (API: Apocalypse-Shema), Hugging Face, LangChain
+Design	Figma
+Version Control	GitHub
+Communication	Discord
+
+
+Written by Junior Mpolo
+September 18, 2025
