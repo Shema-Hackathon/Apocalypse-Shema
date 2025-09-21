@@ -76,7 +76,18 @@ echo "TOKEN acquired? ${#TOKEN} chars"
   "stream": false
 }
 ```
-
+Et cette structure :
+```json
+{
+  "model": "us.meta.llama3-3-70b-instruct-v1:0",
+  "messages": [
+    {"role":"system","content":"You are a Revelation scholar..."},
+    {"role":"user","content":"Who are the 24 elders?"},
+    {"role":"assistant","content":"..."},
+    {"role":"user","content":"Give 3 scriptural cross-references."}
+  ]
+}
+```
 **cURL**
 ```bash
 curl -sS -H "Authorization: Bearer $TOKEN"      -H "Content-Type: application/json"      "$GLOO_BASE/ai/v1/chat/completions"      -d '{
