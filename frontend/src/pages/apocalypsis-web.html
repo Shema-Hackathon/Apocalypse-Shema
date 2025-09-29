@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalypse Shema - Biblical Symbols Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c5ce7',
+                        secondary: '#00b894',
+                        dark: '#1a1a2e',
+                        'dark-light': '#16213e',
+                        'card-dark': '#252535'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .get-started-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #6c5ce7;
+            border-radius: 3px;
+        }
+
+        .modal-overlay {
+            animation: fadeIn 0.2s ease-out;
+        }
+        
+        .modal-content {
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-dark to-dark-light min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <img 
+                        src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                        alt="Apocalypse Shema Logo"
+                        class="w-8 h-8 rounded-lg object-cover"
+                    >
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Apocalypse Shema
+                    </span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active text-primary" data-page="home">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="#chat" class="nav-link text-gray-300 hover:text-white" data-page="chat">
+                        <i class="fas fa-comment-dots mr-2"></i>AI Chat
+                    </a>
+                    <a href="#symbols" class="nav-link text-gray-300 hover:text-white" data-page="symbols">
+                        <i class="fas fa-images mr-2"></i>Symbols
+                    </a>
+                    <a href="#faith-steps" class="nav-link text-gray-300 hover:text-white" data-page="faith-steps">
+                        <i class="fas fa-pray mr-2"></i>Faith Steps
+                    </a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white" data-page="about">
+                        <i class="fas fa-info-circle mr-2"></i>About
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button onclick="showPage('auth')" class="hidden md:block px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
+                        Sign In
+                    </button>
+                    <button onclick="showPage('auth')" class="bg-primary hover:bg-purple-700 px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+                        Sign Up
+                    </button>
+                    
+                    <button class="md:hidden text-gray-300 hover:text-white" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:hidden hidden border-t border-gray-700 pt-4 pb-2" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link mobile-nav-link text-primary" data-page="home">
+                        <i class="fas fa-home mr-3"></i>Home
+                    </a>
+                    <a href="#chat" class="nav-link mobile-nav-link text-gray-300 hover:text-white" data-page="chat">
+                        <i class="fas fa-comment-dots mr-3"></i>AI Chat
+                    </a>
+                    <a href="#symbols" class="nav-link mobile-nav-link text-gray-300 hover:text-white" data-page="symbols">
+                        <i class="fas fa-images mr-3"></i>Symbols
+                    </a>
+                    <a href="#faith-steps" class="nav-link mobile-nav-link text-gray-300 hover:text-white" data-page="faith-steps">
+                        <i class="fas fa-pray mr-3"></i>Faith Steps
+                    </a>
+                    <a href="#about" class="nav-link mobile-nav-link text-gray-300 hover:text-white" data-page="about">
+                        <i class="fas fa-info-circle mr-3"></i>About
+                    </a>
+                    <a href="#auth" class="nav-link mobile-nav-link text-gray-300 hover:text-white" data-page="auth">
+                        <i class="fas fa-user mr-3"></i>Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Home/Landing Page -->
+        <div id="home-page" class="page active fade-in">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-12">
+                    <img 
+                        src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                        alt="Apocalypse Shema Logo"
+                        class="w-32 h-32 rounded-2xl object-cover mx-auto mb-8 shadow-2xl"
+                    >
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Apocalypse Shema
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Transform your biblical meditation from passive reading into interactive dialogue with AI-guided insights
+                    </p>
+                    
+                    <button onclick="showPage('auth')" class="get-started-btn bg-primary hover:bg-purple-700 px-8 py-4 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 shadow-2xl">
+                        Get Started
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="bg-card-dark p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-robot text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AI Chat Companion</h3>
+                        <p class="text-gray-300">Interactive dialogue with specialized AI for Revelation study</p>
+                    </div>
+                    
+                    <div class="bg-card-dark p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-images text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Symbols Guide</h3>
+                        <p class="text-gray-300">Explore 20+ biblical symbols with detailed explanations</p>
+                    </div>
+                    
+                    <div class="bg-card-dark p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-pray text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Steps of Faith</h3>
+                        <p class="text-gray-300">Personalized actions to apply biblical insights daily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authentication Page -->
+        <div id="auth-page" class="page hidden fade-in">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <img 
+                        src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                        alt="Apocalypse Shema Logo"
+                        class="w-20 h-20 rounded-xl object-cover mx-auto mb-4"
+                    >
+                    <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
+                    <p class="text-gray-300">Sign in to your Apocalypse Shema account</p>
+                </div>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-8">
+                    <form id="auth-form">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    Email
+                                </label>
+                                <input 
+                                    type="email" 
+                                    placeholder="your@email.com"
+                                    class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                    required
+                                >
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    placeholder="Your password"
+                                    class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                    required
+                                >
+                            </div>
+
+                            <div class="border-t border-gray-700 pt-6">
+                                <button type="submit" class="w-full bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-6">
+                        <p class="text-gray-400">
+                            Don't have an account? 
+                            <button onclick="showPage('signup')" class="text-primary hover:text-purple-300 font-medium ml-1 transition-colors">
+                                Sign Up
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Page -->
+        <div id="chat-page" class="page hidden fade-in">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <img 
+                            src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                            alt="Apocalypse Shema Logo"
+                            class="w-16 h-16 rounded-xl object-cover"
+                        >
+                        <h1 class="text-4xl font-bold">Chat with Shema</h1>
+                    </div>
+                    <p class="text-gray-300 text-lg">Ask your questions about the Book of Revelation</p>
+                </div>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="h-96 overflow-y-auto p-6 space-y-4" id="chat-messages">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-2xl">
+                                <p class="text-white">Hello! I'm Shema, your guide to exploring the Book of Revelation. How can I help you today?</p>
+                                <span class="text-xs text-gray-400 mt-1 block">12:05</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-700 p-4">
+                        <div class="flex space-x-4">
+                            <input 
+                                type="text" 
+                                placeholder="Type your message..." 
+                                class="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                id="chat-input"
+                            >
+                            <button onclick="sendMessage()" class="bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symbols Gallery Page -->
+        <div id="symbols-page" class="page hidden fade-in">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <img 
+                            src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                            alt="Apocalypse Shema Logo"
+                            class="w-16 h-16 rounded-xl object-cover"
+                        >
+                        <h1 class="text-4xl font-bold">Symbols & Visions of Revelation</h1>
+                    </div>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        Explore the striking images of the Book of Revelation and discover their deep meaning
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="filter-btn active px-4 py-2 bg-primary rounded-full text-sm font-medium transition-colors" data-filter="all">
+                        All Symbols
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="christ">
+                        Vision of Christ
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="judgment">
+                        Judgments
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="hope">
+                        Hope
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="symbols-grid">
+                    <!-- Symbols will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signup-page" class="page hidden fade-in">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <img 
+                        src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                        alt="Apocalypse Shema Logo"
+                        class="w-20 h-20 rounded-xl object-cover mx-auto mb-4"
+                    >
+                    <h1 class="text-3xl font-bold mb-2">Create Account</h1>
+                    <p class="text-gray-300">Join Apocalypse Shema today</p>
+                </div>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-8">
+                    <form id="signup-form">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    Email
+                                </label>
+                                <input 
+                                    type="email" 
+                                    placeholder="your@email.com"
+                                    class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                    required
+                                >
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    placeholder="Create a password"
+                                    class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    Confirm Password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    placeholder="Confirm your password"
+                                    class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                                    required
+                                >
+                            </div>
+
+                            <div class="border-t border-gray-700 pt-6">
+                                <button type="submit" class="w-full bg-secondary hover:bg-teal-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    Create Account
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-6">
+                        <p class="text-gray-400">
+                            Already have an account? 
+                            <button onclick="showPage('auth')" class="text-primary hover:text-purple-300 font-medium ml-1 transition-colors">
+                                Sign In
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faith Steps Page - MODIFIÉE -->
+        <div id="faith-steps-page" class="page hidden fade-in">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <img 
+                            src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                            alt="Apocalypse Shema Logo"
+                            class="w-16 h-16 rounded-xl object-cover"
+                        >
+                        <h1 class="text-4xl font-bold">My Faith Steps</h1>
+                    </div>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        Transform biblical insights into actionable steps for your spiritual journey
+                    </p>
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-card-dark rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-primary mb-2" id="total-steps">0</div>
+                        <div class="text-gray-300">Total Steps</div>
+                    </div>
+                    <div class="bg-card-dark rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2" id="completed-steps">0</div>
+                        <div class="text-gray-300">Completed</div>
+                    </div>
+                    <div class="bg-card-dark rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold text-purple-500 mb-2" id="current-streak">0</div>
+                        <div class="text-gray-300">Day Streak</div>
+                    </div>
+                </div>
+
+                <!-- Faith Steps List -->
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-6 mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">My Faith Journey</h2>
+                        <button onclick="showAddStepModal()" class="bg-primary hover:bg-purple-700 px-4 py-2 rounded-lg font-medium transition-colors">
+                            <i class="fas fa-plus mr-2"></i>Add Step
+                        </button>
+                    </div>
+
+                    <div class="space-y-4" id="faith-steps-list">
+                        <!-- Faith steps will be populated by JavaScript -->
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="empty-steps" class="text-center py-12">
+                        <i class="fas fa-pray text-6xl text-gray-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-400 mb-2">No Faith Steps Yet</h3>
+                        <p class="text-gray-500 mb-4">Start your spiritual journey by adding your first faith step</p>
+                        <button onclick="showAddStepModal()" class="bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                            Add Your First Step
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Suggestions Section -->
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4">Inspired by Recent Studies</h2>
+                    <p class="text-gray-300 mb-6">Based on biblical explorations, here are some faith step suggestions:</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4" id="suggestions-grid">
+                        <!-- Suggestions will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symbol Detail Page -->
+        <div id="symbol-detail-page" class="page hidden fade-in">
+            <div class="max-w-6xl mx-auto">
+                <button onclick="showPage('symbols')" class="flex items-center text-gray-300 hover:text-white mb-6 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Symbols
+                </button>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="relative h-64 bg-gradient-to-r from-primary to-purple-800 flex items-center justify-center">
+                        <div id="detail-icon" class="text-6xl mb-4">🕯️</div>
+                        <div class="absolute bottom-4 left-4">
+                            <button onclick="readPassage()" class="bg-secondary hover:bg-teal-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                Read Passage
+                            </button>
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black bg-opacity-50 px-3 py-1 rounded-lg text-sm">
+                            <span id="detail-reference">Revelation 1:12-20</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <h1 id="detail-title" class="text-3xl font-bold mb-2">The 7 Golden Lampstands</h1>
+                        
+                        <div class="border-b border-gray-700 mb-6">
+                            <div class="flex space-x-8">
+                                <button class="tab-btn active py-3 border-b-2 border-primary text-primary font-medium" data-tab="meaning">
+                                    <i class="fas fa-book mr-2"></i>Meaning
+                                </button>
+                                <button class="tab-btn py-3 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" data-tab="context">
+                                    <i class="fas fa-search mr-2"></i>Context
+                                </button>
+                                <button class="tab-btn py-3 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" data-tab="application">
+                                    <i class="fas fa-heart mr-2"></i>Application
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div id="meaning-tab" class="tab-pane active">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Theological Meaning</h3>
+                                <p id="meaning-content" class="text-gray-300 leading-relaxed">
+                                    The seven golden lampstands represent the seven churches of Asia Minor and symbolize the presence of Jesus Christ among His people. Each lampstand emits its own light, but this light comes from a single source - Christ Himself.
+                                </p>
+                            </div>
+
+                            <div id="context-tab" class="tab-pane hidden">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Historical and Biblical Context</h3>
+                                <p id="context-content" class="text-gray-300 leading-relaxed">
+                                    This vision follows the tradition of light symbols in the Old Testament, particularly the seven-branched lampstand of the temple. The number seven symbolizes perfection and fullness, indicating that Christ is present throughout His Church.
+                                </p>
+                            </div>
+
+                            <div id="application-tab" class="tab-pane hidden">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Personal Application</h3>
+                                <p id="application-content" class="text-gray-300 leading-relaxed mb-6">
+                                    This vision reminds us that Christ walks among His Church today. He knows our situations, our struggles, and our victories. As believers, we are called to be light-bearers in a darkened world.
+                                </p>
+                                <button onclick="discussWithShema()" class="bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                                    <i class="fas fa-comment-dots mr-2"></i>Discuss with Shema
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+                            <button id="prev-btn" onclick="navigateSymbol(-1)" class="flex items-center text-gray-300 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                <i class="fas fa-chevron-left mr-2"></i> Previous Symbol
+                            </button>
+                            
+                            <button onclick="showPage('symbols')" class="text-gray-300 hover:text-white transition-colors">
+                                Back to Gallery
+                            </button>
+                            
+                            <button id="next-btn" onclick="navigateSymbol(1)" class="flex items-center text-gray-300 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                Next Symbol <i class="fas fa-chevron-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page hidden fade-in">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <img 
+                            src="https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/logo.jpg" 
+                            alt="Apocalypse Shema Logo"
+                            class="w-20 h-20 rounded-2xl object-cover"
+                        >
+                        <h1 class="text-4xl font-bold">About Apocalypse Shema</h1>
+                    </div>
+                </div>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Our Mission</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Apocalypse Shema is an innovative platform that uses artificial intelligence to make the Book of Revelation accessible and applicable to daily life.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed">
+                                Our goal is to transform Bible study from passive reading into an interactive and personalized dialogue.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-secondary">Features</h3>
+                            <ul class="text-gray-300 space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-robot text-primary mr-3"></i>
+                                    AI Chat specialized in Revelation
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-images text-primary mr-3"></i>
+                                    Complete guide to symbols and visions
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-pray text-primary mr-3"></i>
+                                    Personalized "Steps of Faith"
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-book text-primary mr-3"></i>
+                                    Contextual biblical references
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation for Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-90 backdrop-blur-sm border-t border-gray-700 z-40">
+        <div class="flex justify-around items-center p-3">
+            <button onclick="showPage('home')" class="flex flex-col items-center text-primary transition-colors">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span class="text-xs">Home</span>
+            </button>
+            <button onclick="showPage('chat')" class="flex flex-col items-center text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-comment-dots text-lg mb-1"></i>
+                <span class="text-xs">Chat</span>
+            </button>
+            <button onclick="showPage('symbols')" class="flex flex-col items-center text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-images text-lg mb-1"></i>
+                <span class="text-xs">Symbols</span>
+            </button>
+            <button onclick="showPage('faith-steps')" class="flex flex-col items-center text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-pray text-lg mb-1"></i>
+                <span class="text-xs">Faith Steps</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Faith Steps -->
+    
+<div id="add-step-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal-overlay hidden">
+    <div class="bg-card-dark rounded-2xl w-full max-w-2xl mx-4 max-h-[90vh] flex flex-col modal-content">
+        <!-- Header fixe -->
+        <div class="flex justify-between items-center p-6 border-b border-gray-700 flex-shrink-0">
+            <h3 class="text-2xl font-bold">Create Faith Step</h3>
+            <button onclick="hideAddStepModal()" class="text-gray-400 hover:text-white">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Contenu scrollable -->
+        <div class="flex-1 overflow-y-auto p-6">
+            <div class="space-y-6">
+                <!-- Suggestions Section -->
+                <div id="suggestions-section">
+                    <h4 class="text-lg font-semibold mb-3 text-primary">Choose a Suggestion</h4>
+                    <div class="space-y-2 mb-4" id="modal-suggestions">
+                        <!-- Suggestions will be populated here -->
+                    </div>
+                    <div class="text-center pt-2">
+                        <button onclick="showCustomForm()" class="text-primary hover:text-purple-300 font-medium">
+                            <i class="fas fa-edit mr-2"></i>Or create my own custom step
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Form Section -->
+                <div id="custom-form-section" class="hidden">
+                    <h4 class="text-lg font-semibold mb-3 text-secondary">Create Custom Step</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                Step Title
+                            </label>
+                            <input 
+                                type="text" 
+                                id="custom-title"
+                                placeholder="e.g., Morning Prayer for Revelation 1"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                            >
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                Bible Passage
+                            </label>
+                            <input 
+                                type="text" 
+                                id="custom-passage"
+                                placeholder="e.g., Revelation 1:8"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                            >
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                Meditation Focus
+                            </label>
+                            <textarea 
+                                id="custom-meditation"
+                                placeholder="What biblical truth are you meditating on?"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors h-20 resize-none"
+                            ></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                Your Faith Step
+                            </label>
+                            <textarea 
+                                id="custom-step"
+                                placeholder="What specific action will you take based on this meditation?"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors h-20 resize-none"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boutons fixes en bas -->
+        <div class="flex justify-end space-x-4 p-6 border-t border-gray-700 flex-shrink-0">
+            <button onclick="hideAddStepModal()" class="px-6 py-2 text-gray-300 hover:text-white transition-colors">
+                Cancel
+            </button>
+            <button onclick="createFaithStep()" class="bg-primary hover:bg-purple-700 px-6 py-2 rounded-lg font-medium transition-colors">
+                Create Step
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Symbols data
+        const symbols = [
+            {
+                id: 1,
+                title: "The 7 Golden Lampstands",
+                reference: "Revelation 1:12-20",
+                category: "christ",
+                icon: "🕯️",
+                meaning: "The seven golden lampstands represent the seven churches of Asia Minor and symbolize the presence of Jesus Christ among His people. Each lampstand emits its own light, but this light comes from a single source - Christ Himself.",
+                context: "This vision follows the tradition of light symbols in the Old Testament, particularly the seven-branched lampstand of the temple. The number seven symbolizes perfection and fullness, indicating that Christ is present throughout His Church.",
+                application: "This vision reminds us that Christ walks among His Church today. He knows our situations, our struggles, and our victories. As believers, we are called to be light-bearers in a darkened world."
+            },
+            {
+                id: 2,
+                title: "The Son of Man",
+                reference: "Revelation 1:13-16",
+                category: "christ",
+                icon: "👑",
+                meaning: "The vision of Christ glorified, clothed in a long robe, with a golden sash, eyes like a flame of fire, and a voice like the sound of many waters.",
+                context: "This description combines elements from the visions of Daniel and Ezekiel, presenting Christ as the supreme judge and high priest.",
+                application: "This vision of Christ reminds us of His absolute lordship and authority over all things, including our personal lives."
+            },
+            {
+                id: 3,
+                title: "The 4 Horsemen",
+                reference: "Revelation 6:1-8",
+                category: "judgment",
+                icon: "🐎",
+                meaning: "Four horsemen representing conquest, war, famine, and death, released by the opening of the first four seals.",
+                context: "These horsemen symbolize divine judgments preceding Christ's return, recalling similar judgments in Zechariah's prophecies.",
+                application: "A call to vigilance and faithfulness in times of global trouble and uncertainty."
+            }
+        ];
+
+        // Faith Steps data - COMMENCE VIDE
+        let faithSteps = [];
+
+        // Faith Step Suggestions Library
+        const faithStepSuggestions = [
+            {
+                title: "Acknowledge God's Sovereignty",
+                passage: "Revelation 1:8",
+                meditation: "I am the Alpha and the Omega",
+                step: "Start your day by recognizing God's eternal nature and control over all things"
+            },
+            {
+                title: "Practice Christ's Presence",
+                passage: "Revelation 1:12-13", 
+                meditation: "Christ walks among the lampstands",
+                step: "Be consciously aware of Jesus' presence in your daily activities"
+            },
+            {
+                title: "Be a Light Bearer",
+                passage: "Revelation 1:20",
+                meditation: "The seven stars are angels of the churches",
+                step: "Intentionally share God's truth with someone needing encouragement"
+            },
+            {
+                title: "Cultivate Spiritual Alertness", 
+                passage: "Revelation 3:2-3",
+                meditation: "Wake up and strengthen what remains",
+                step: "Identify one area of spiritual complacency and take action today"
+            },
+            {
+                title: "Embrace Repentance",
+                passage: "Revelation 2:5",
+                meditation: "Remember from where you have fallen",
+                step: "Humbly examine your heart and repent of one specific sin"
+            },
+            {
+                title: "Stand Firm in Faith",
+                passage: "Revelation 2:10",
+                meditation: "Be faithful unto death",
+                step: "Identify a current challenge and reaffirm your commitment to Christ"
+            }
+        ];
+
+        let currentSymbolIndex = 0;
+        let currentFilter = 'all';
+        let selectedSuggestion = null;
+        let isCustomForm = false;
+
+        // Page navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(`${pageName}-page`);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                targetPage.classList.add('active');
+            }
+            
+            // Update navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active', 'text-primary');
+                link.classList.add('text-gray-300');
+            });
+            
+            // Activate current nav link
+            const activeLink = document.querySelector(`[data-page="${pageName}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active', 'text-primary');
+                activeLink.classList.remove('text-gray-300');
+            }
+            
+            // Initialize specific page content
+            if (pageName === 'symbols') {
+                initializeSymbolsGallery();
+            }
+            
+            if (pageName === 'faith-steps') {
+                initializeFaithSteps();
+                initializeSuggestions();
+            }
+            
+            // Hide mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        // Initialize symbols gallery
+        function initializeSymbolsGallery() {
+            const grid = document.getElementById('symbols-grid');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            const filteredSymbols = currentFilter === 'all' 
+                ? symbols 
+                : symbols.filter(symbol => symbol.category === currentFilter);
+            
+            filteredSymbols.forEach((symbol, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-card-dark rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer';
+                card.onclick = () => showSymbolDetail(index);
+                
+                card.innerHTML = `
+                    <div class="h-32 bg-gradient-to-r from-primary to-purple-700 flex items-center justify-center">
+                        <span class="text-4xl">${symbol.icon}</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">${symbol.title}</h3>
+                        <p class="text-primary text-sm mb-3">${symbol.reference}</p>
+                        <span class="inline-block px-3 py-1 bg-gray-700 rounded-full text-xs">
+                            ${getCategoryName(symbol.category)}
+                        </span>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Initialize faith steps
+        function initializeFaithSteps() {
+            const stepsList = document.getElementById('faith-steps-list');
+            const emptyState = document.getElementById('empty-steps');
+            
+            if (!stepsList || !emptyState) return;
+            
+            // Update stats
+            const totalSteps = document.getElementById('total-steps');
+            const completedSteps = document.getElementById('completed-steps');
+            const currentStreak = document.getElementById('current-streak');
+            
+            if (totalSteps) totalSteps.textContent = faithSteps.length;
+            if (completedSteps) completedSteps.textContent = faithSteps.filter(step => step.completed).length;
+            if (currentStreak) currentStreak.textContent = calculateCurrentStreak();
+            
+            if (faithSteps.length === 0) {
+                stepsList.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            
+            emptyState.classList.add('hidden');
+            stepsList.innerHTML = '';
+            
+            faithSteps.forEach((step, index) => {
+                const stepElement = document.createElement('div');
+                stepElement.className = `bg-gray-800 rounded-xl p-6 border-l-4 ${
+                    step.completed ? 'border-secondary' : 'border-primary'
+                }`;
+                
+                stepElement.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="font-bold text-lg mr-3">${step.title}</h3>
+                                <span class="text-xs px-2 py-1 rounded-full ${
+                                    step.source === 'suggestion' 
+                                        ? 'bg-blue-500 text-white' 
+                                        : 'bg-green-500 text-white'
+                                }">
+                                    ${step.source === 'suggestion' ? 'Suggested' : 'Custom'}
+                                </span>
+                            </div>
+                            <p class="text-primary text-sm mb-2">
+                                <i class="fas fa-book mr-1"></i>${step.passage}
+                            </p>
+                            <p class="text-gray-300 text-sm mb-2">
+                                <i class="fas fa-quote-left mr-1"></i>${step.meditation}
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">
+                                ${formatDate(step.date)}
+                            </span>
+                            <button onclick="toggleStepCompletion(${index})" class="w-6 h-6 rounded-full border-2 ${
+                                step.completed 
+                                    ? 'bg-secondary border-secondary' 
+                                    : 'border-gray-400'
+                            } flex items-center justify-center">
+                                ${step.completed ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3">
+                        <p class="text-sm text-gray-300">
+                            <strong>Faith Step:</strong> ${step.step}
+                        </p>
+                    </div>
+                `;
+                
+                stepsList.appendChild(stepElement);
+            });
+        }
+
+        // Initialize suggestions
+        function initializeSuggestions() {
+            const suggestionsGrid = document.getElementById('suggestions-grid');
+            if (!suggestionsGrid) return;
+            
+            suggestionsGrid.innerHTML = '';
+
+            faithStepSuggestions.forEach((suggestion, index) => {
+                const suggestionElement = document.createElement('div');
+                suggestionElement.className = 'bg-gray-800 rounded-xl p-4 card-hover cursor-pointer';
+                suggestionElement.onclick = () => selectSuggestion(index);
+                
+                suggestionElement.innerHTML = `
+                    <h4 class="font-bold text-primary mb-2">${suggestion.title}</h4>
+                    <p class="text-sm text-gray-300 mb-2">
+                        <i class="fas fa-book mr-1"></i>${suggestion.passage}
+                    </p>
+                    <p class="text-sm text-gray-400 mb-3">${suggestion.meditation}</p>
+                    <p class="text-xs text-secondary">
+                        <strong>Step:</strong> ${suggestion.step}
+                    </p>
+                `;
+                
+                suggestionsGrid.appendChild(suggestionElement);
+            });
+        }
+
+        // Initialize modal suggestions
+        function initializeModalSuggestions() {
+            const modalSuggestions = document.getElementById('modal-suggestions');
+            if (!modalSuggestions) return;
+            
+            modalSuggestions.innerHTML = '';
+
+            faithStepSuggestions.forEach((suggestion, index) => {
+                const suggestionElement = document.createElement('div');
+                suggestionElement.className = `p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                    selectedSuggestion === index 
+                        ? 'border-primary bg-primary bg-opacity-10' 
+                        : 'border-gray-600 hover:border-gray-500'
+                }`;
+                suggestionElement.onclick = () => selectModalSuggestion(index);
+                
+                suggestionElement.innerHTML = `
+                    <div class="flex items-start">
+                        <div class="w-5 h-5 rounded-full border-2 mt-1 mr-3 flex-shrink-0 ${
+                            selectedSuggestion === index ? 'bg-primary border-primary' : 'border-gray-400'
+                        }"></div>
+                        <div>
+                            <h5 class="font-semibold mb-1">${suggestion.title}</h5>
+                            <p class="text-sm text-gray-300 mb-1">${suggestion.passage}</p>
+                            <p class="text-xs text-gray-400">${suggestion.step}</p>
+                        </div>
+                    </div>
+                `;
+                
+                modalSuggestions.appendChild(suggestionElement);
+            });
+        }
+
+        // Select suggestion in modal
+        function selectModalSuggestion(index) {
+            selectedSuggestion = index;
+            initializeModalSuggestions();
+        }
+
+        // Select suggestion from grid
+        function selectSuggestion(index) {
+            selectedSuggestion = index;
+            showAddStepModal();
+        }
+
+        // Show add step modal
+        function showAddStepModal() {
+            selectedSuggestion = null;
+            isCustomForm = false;
+            initializeModalSuggestions();
+            const modal = document.getElementById('add-step-modal');
+            const suggestionsSection = document.getElementById('suggestions-section');
+            const customFormSection = document.getElementById('custom-form-section');
+            
+            if (modal) modal.classList.remove('hidden');
+            if (suggestionsSection) suggestionsSection.classList.remove('hidden');
+            if (customFormSection) customFormSection.classList.add('hidden');
+        }
+
+        // Hide add step modal
+        function hideAddStepModal() {
+            const modal = document.getElementById('add-step-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // Show custom form
+        function showCustomForm() {
+            isCustomForm = true;
+            selectedSuggestion = null;
+            const suggestionsSection = document.getElementById('suggestions-section');
+            const customFormSection = document.getElementById('custom-form-section');
+            
+            if (suggestionsSection) suggestionsSection.classList.add('hidden');
+            if (customFormSection) customFormSection.classList.remove('hidden');
+            initializeModalSuggestions();
+        }
+
+        // Create faith step
+        function createFaithStep() {
+            let newStep;
+
+            if (isCustomForm) {
+                const title = document.getElementById('custom-title')?.value || '';
+                const passage = document.getElementById('custom-passage')?.value || '';
+                const meditation = document.getElementById('custom-meditation')?.value || '';
+                const step = document.getElementById('custom-step')?.value || '';
+
+                if (!title || !passage || !meditation || !step) {
+                    alert('Please fill all fields');
+                    return;
+                }
+
+                newStep = {
+                    id: faithSteps.length + 1,
+                    title,
+                    passage,
+                    meditation,
+                    step,
+                    date: new Date().toISOString().split('T')[0],
+                    completed: false,
+                    source: 'custom'
+                };
+            } else if (selectedSuggestion !== null) {
+                const suggestion = faithStepSuggestions[selectedSuggestion];
+                newStep = {
+                    id: faithSteps.length + 1,
+                    title: suggestion.title,
+                    passage: suggestion.passage,
+                    meditation: suggestion.meditation,
+                    step: suggestion.step,
+                    date: new Date().toISOString().split('T')[0],
+                    completed: false,
+                    source: 'suggestion'
+                };
+            } else {
+                alert('Please select a suggestion or create a custom step');
+                return;
+            }
+
+            faithSteps.unshift(newStep);
+            initializeFaithSteps();
+            hideAddStepModal();
+            
+            // Reset form
+            const customTitle = document.getElementById('custom-title');
+            const customPassage = document.getElementById('custom-passage');
+            const customMeditation = document.getElementById('custom-meditation');
+            const customStep = document.getElementById('custom-step');
+            
+            if (customTitle) customTitle.value = '';
+            if (customPassage) customPassage.value = '';
+            if (customMeditation) customMeditation.value = '';
+            if (customStep) customStep.value = '';
+        }
+
+        // Calculate current streak
+        function calculateCurrentStreak() {
+            return Math.min(faithSteps.length, 5);
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+
+        // Toggle step completion
+        function toggleStepCompletion(index) {
+            if (faithSteps[index]) {
+                faithSteps[index].completed = !faithSteps[index].completed;
+                initializeFaithSteps();
+            }
+        }
+
+        // Get category name
+        function getCategoryName(category) {
+            const categories = {
+                'christ': 'Vision of Christ',
+                'judgment': 'Judgments',
+                'hope': 'Hope'
+            };
+            return categories[category] || category;
+        }
+
+        // Filter symbols
+        function filterSymbols(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary');
+                btn.classList.add('bg-gray-700');
+            });
+            event.target.classList.add('active', 'bg-primary');
+            event.target.classList.remove('bg-gray-700');
+            initializeSymbolsGallery();
+        }
+
+        // Show symbol detail
+        function showSymbolDetail(index) {
+            currentSymbolIndex = index;
+            const symbol = symbols[index];
+            
+            const detailTitle = document.getElementById('detail-title');
+            const detailReference = document.getElementById('detail-reference');
+            const detailIcon = document.getElementById('detail-icon');
+            const meaningContent = document.getElementById('meaning-content');
+            const contextContent = document.getElementById('context-content');
+            const applicationContent = document.getElementById('application-content');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            if (detailTitle) detailTitle.textContent = symbol.title;
+            if (detailReference) detailReference.textContent = symbol.reference;
+            if (detailIcon) detailIcon.textContent = symbol.icon;
+            if (meaningContent) meaningContent.textContent = symbol.meaning;
+            if (contextContent) contextContent.textContent = symbol.context;
+            if (applicationContent) applicationContent.textContent = symbol.application;
+            if (prevBtn) prevBtn.disabled = index === 0;
+            if (nextBtn) nextBtn.disabled = index === symbols.length - 1;
+            
+            showPage('symbol-detail');
+        }
+
+        // Navigate between symbols
+        function navigateSymbol(direction) {
+            const newIndex = currentSymbolIndex + direction;
+            if (newIndex >= 0 && newIndex < symbols.length) {
+                showSymbolDetail(newIndex);
+            }
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-gray-400');
+            });
+            
+            event.target.classList.add('active', 'border-primary', 'text-primary');
+            event.target.classList.remove('border-transparent', 'text-gray-400');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.add('hidden');
+                pane.classList.remove('active');
+            });
+            
+            const targetTab = document.getElementById(`${tabName}-tab`);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+                targetTab.classList.add('active');
+            }
+        }
+
+        // Send message function
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input?.value.trim();
+            
+            if (message && input) {
+                const messagesContainer = document.getElementById('chat-messages');
+                if (!messagesContainer) return;
+                
+                // Add user message
+                const userMessageElement = document.createElement('div');
+                userMessageElement.className = 'flex items-start space-x-3 justify-end';
+                userMessageElement.innerHTML = `
+                    <div class="bg-primary rounded-2xl rounded-tr-none px-4 py-3 max-w-2xl">
+                        <p class="text-white">${message}</p>
+                        <span class="text-xs text-gray-300 mt-1 block">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                    </div>
+                    <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-white text-sm"></i>
+                    </div>
+                `;
+                
+                messagesContainer.appendChild(userMessageElement);
+                input.value = '';
+                
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Simulate AI response
+                setTimeout(() => {
+                    const aiMessageElement = document.createElement('div');
+                    aiMessageElement.className = 'flex items-start space-x-3';
+                    aiMessageElement.innerHTML = `
+                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div class="bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-2xl">
+                            <p class="text-white">Thank you for your message! I'm processing your question about Revelation...</p>
+                            <span class="text-xs text-gray-400 mt-1 block">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                        </div>
+                    `;
+                    
+                    messagesContainer.appendChild(aiMessageElement);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        // Read passage function
+        function readPassage() {
+            const symbol = symbols[currentSymbolIndex];
+            alert(`Opening Bible passage: ${symbol.reference}`);
+        }
+
+        // Discuss with Shema function
+        function discussWithShema() {
+            const symbol = symbols[currentSymbolIndex];
+            showPage('chat');
+            setTimeout(() => {
+                const input = document.getElementById('chat-input');
+                if (input) {
+                    input.value = `I want to explore the symbolism of ${symbol.title}`;
+                }
+            }, 500);
+        }
+
+        // Show sign up page
+        function showSignUp() {
+            showPage('signup');
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize symbols gallery
+            initializeSymbolsGallery();
+            
+            // Initialize faith steps
+            initializeFaithSteps();
+            
+            // Navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    showPage(page);
+                });
+            });
+            
+            // Mobile navigation links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    showPage(page);
+                });
+            });
+            
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    filterSymbols(filter);
+                });
+            });
+            
+            // Tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tab = this.getAttribute('data-tab');
+                    showTab(tab);
+                });
+            });
+            
+            // Chat input enter key
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
+            
+            // Auth form
+            const authForm = document.getElementById('auth-form');
+            if (authForm) {
+                authForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Ici, ajouter la logique de connexion réelle
+                    console.log('Tentative de connexion');
+                    
+                    // Simuler une connexion réussie
+                    setTimeout(() => {
+                        showPage('chat');
+                    }, 1000);
+                });
+            }
+            
+            // Sign up form
+            const signupForm = document.getElementById('signup-form');
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Ici, ajouter la logique d'inscription réelle
+                    console.log('Tentative d\'inscription');
+                    
+                    // Simuler une inscription réussie
+                    setTimeout(() => {
+                        showPage('chat');
+                    }, 1000);
+                });
+            }
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const menu = document.getElementById('mobile-menu');
+                    if (menu) {
+                        menu.classList.toggle('hidden');
+                    }
+                });
+            }
+        });
+
+        // Make functions globally available
+        window.showPage = showPage;
+        window.showSignUp = showSignUp;
+        window.filterSymbols = filterSymbols;
+        window.showSymbolDetail = showSymbolDetail;
+        window.navigateSymbol = navigateSymbol;
+        window.showTab = showTab;
+        window.sendMessage = sendMessage;
+        window.readPassage = readPassage;
+        window.discussWithShema = discussWithShema;
+        window.toggleStepCompletion = toggleStepCompletion;
+        window.showAddStepModal = showAddStepModal;
+        window.hideAddStepModal = hideAddStepModal;
+        window.showCustomForm = showCustomForm;
+        window.selectSuggestion = selectSuggestion;
+        window.selectModalSuggestion = selectModalSuggestion;
+        window.createFaithStep = createFaithStep;
+    </script>
+</body>
+</html>
