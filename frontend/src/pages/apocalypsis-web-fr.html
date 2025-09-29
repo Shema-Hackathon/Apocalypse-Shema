@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalypse Shema - Guide des Symboles Bibliques</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c5ce7',
+                        secondary: '#00b894',
+                        dark: '#1a1a2e',
+                        'dark-light': '#16213e',
+                        'card-dark': '#252535'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #6c5ce7;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-dark to-dark-light min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg"></div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Apocalypse Shema
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#chat" class="nav-link active" data-page="chat">
+                        <i class="fas fa-comment-dots mr-2"></i>Chat IA
+                    </a>
+                    <a href="#symbols" class="nav-link" data-page="symbols">
+                        <i class="fas fa-images mr-2"></i>Symboles
+                    </a>
+                    <a href="#about" class="nav-link" data-page="about">
+                        <i class="fas fa-info-circle mr-2"></i>À Propos
+                    </a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
+                        Connexion
+                    </button>
+                    <button class="bg-primary hover:bg-purple-700 px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+                        S'inscrire
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden text-gray-300 hover:text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Chat Page -->
+        <div id="chat-page" class="page active fade-in">
+            <div class="max-w-4xl mx-auto">
+                <!-- Chat Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold mb-4">Chat avec Shema</h1>
+                    <p class="text-gray-300 text-lg">Posez vos questions sur le livre de l'Apocalypse</p>
+                </div>
+
+                <!-- Chat Container -->
+                <div class="bg-card-dark rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Messages Area -->
+                    <div class="h-96 overflow-y-auto p-6 space-y-4">
+                        <!-- Received Message -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-2xl">
+                                <p class="text-white">Bonjour ! Je suis Shema, votre guide pour explorer le livre de l'Apocalypse. Comment puis-je vous aider aujourd'hui ?</p>
+                                <span class="text-xs text-gray-400 mt-1 block">12:05</span>
+                            </div>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="flex items-start space-x-3 justify-end">
+                            <div class="bg-primary rounded-2xl rounded-tr-none px-4 py-3 max-w-2xl">
+                                <p class="text-white">Je voudrais comprendre la signification des 7 chandeliers d'or.</p>
+                                <span class="text-xs text-gray-300 mt-1 block">12:07</span>
+                            </div>
+                            <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user text-white text-sm"></i>
+                            </div>
+                        </div>
+
+                        <!-- Received Message -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-2xl">
+                                <p class="text-white">Les sept chandeliers d'or dans Apocalypse 1:12-20 représentent les sept églises d'Asie Mineure et symbolisent la présence de Jésus-Christ au milieu de son peuple. Chaque chandelier émet sa propre lumière, mais cette lumière vient d'une seule source - Christ lui-même.</p>
+                                <div class="mt-3 p-3 bg-gray-600 rounded-lg">
+                                    <p class="text-sm text-yellow-200">📖 <strong>Step of Faith :</strong> Aujourd'hui, identifiez une manière concrète de refléter la lumière de Christ dans votre communauté.</p>
+                                </div>
+                                <span class="text-xs text-gray-400 mt-1 block">12:08</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="border-t border-gray-700 p-4">
+                        <div class="flex space-x-4">
+                            <input 
+                                type="text" 
+                                placeholder="Tapez votre message..." 
+                                class="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                            >
+                            <button class="bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symbols Gallery Page -->
+        <div id="symbols-page" class="page hidden fade-in">
+            <div class="max-w-7xl mx-auto">
+                <!-- Page Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4">Symboles & Visions de l'Apocalypse</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        Explorez les images marquantes du livre de l'Apocalypse et découvrez leur signification profonde
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="filter-btn active px-4 py-2 bg-primary rounded-full text-sm font-medium transition-colors" data-filter="all">
+                        Tous les symboles
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="christ">
+                        Vision de Christ
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="judgment">
+                        Jugements
+                    </button>
+                    <button class="filter-btn px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-full text-sm font-medium transition-colors" data-filter="hope">
+                        Espérance
+                    </button>
+                </div>
+
+                <!-- Symbols Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="symbols-grid">
+                    <!-- Symbols will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Symbol Detail Page -->
+        <div id="symbol-detail-page" class="page hidden fade-in">
+            <div class="max-w-6xl mx-auto">
+                <!-- Back Button -->
+                <button onclick="showPage('symbols')" class="flex items-center text-gray-300 hover:text-white mb-6 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i> Retour aux symboles
+                </button>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Hero Section -->
+                    <div class="relative h-64 bg-gradient-to-r from-primary to-purple-800 flex items-center justify-center">
+                        <div id="detail-icon" class="text-6xl mb-4">🕯️</div>
+                        <div class="absolute bottom-4 left-4">
+                            <button onclick="readPassage()" class="bg-secondary hover:bg-teal-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                Lire le passage
+                            </button>
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black bg-opacity-50 px-3 py-1 rounded-lg text-sm">
+                            <span id="detail-reference">Apocalypse 1:12-20</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8">
+                        <h1 id="detail-title" class="text-3xl font-bold mb-2">Les 7 Chandeliers d'Or</h1>
+                        
+                        <!-- Tabs -->
+                        <div class="border-b border-gray-700 mb-6">
+                            <div class="flex space-x-8">
+                                <button class="tab-btn active py-3 border-b-2 border-primary text-primary font-medium" data-tab="meaning">
+                                    <i class="fas fa-book mr-2"></i>Signification
+                                </button>
+                                <button class="tab-btn py-3 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" data-tab="context">
+                                    <i class="fas fa-search mr-2"></i>Contexte
+                                </button>
+                                <button class="tab-btn py-3 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" data-tab="application">
+                                    <i class="fas fa-heart mr-2"></i>Application
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <div id="meaning-tab" class="tab-pane active">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Signification Théologique</h3>
+                                <p id="meaning-content" class="text-gray-300 leading-relaxed">
+                                    Les sept chandeliers d'or représentent les sept églises d'Asie Mineure et symbolisent la présence de Jésus-Christ au milieu de son peuple. Chaque chandelier émet sa propre lumière, mais cette lumière vient d'une seule source - Christ lui-même.
+                                </p>
+                            </div>
+
+                            <div id="context-tab" class="tab-pane hidden">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Contexte Historique et Biblique</h3>
+                                <p id="context-content" class="text-gray-300 leading-relaxed">
+                                    Cette vision s'inscrit dans la tradition des symboles de lumière dans l'Ancien Testament, particulièrement le chandelier à sept branches du temple. Le nombre sept symbolise la perfection et la plénitude, indiquant que Christ est présent dans toute son Église.
+                                </p>
+                            </div>
+
+                            <div id="application-tab" class="tab-pane hidden">
+                                <h3 class="text-xl font-semibold mb-4 text-primary">Application Personnelle</h3>
+                                <p id="application-content" class="text-gray-300 leading-relaxed mb-6">
+                                    Cette vision nous rappelle que Christ marche au milieu de son Église aujourd'hui. Il connaît nos situations, nos luttes et nos victoires. En tant que croyants, nous sommes appelés à être des porteurs de lumière dans un monde obscurci.
+                                </p>
+                                <button onclick="discussWithShema()" class="bg-primary hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                                    <i class="fas fa-comment-dots mr-2"></i>Discuter avec Shema
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+                            <button id="prev-btn" onclick="navigateSymbol(-1)" class="flex items-center text-gray-300 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                <i class="fas fa-chevron-left mr-2"></i> Symbole précédent
+                            </button>
+                            
+                            <button onclick="showPage('symbols')" class="text-gray-300 hover:text-white transition-colors">
+                                Retour à la galerie
+                            </button>
+                            
+                            <button id="next-btn" onclick="navigateSymbol(1)" class="flex items-center text-gray-300 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                Symbole suivant <i class="fas fa-chevron-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page hidden fade-in">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4">À Propos d'Apocalypse Shema</h1>
+                </div>
+
+                <div class="bg-card-dark rounded-2xl shadow-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Notre Mission</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Apocalypse Shema est une plateforme innovante qui utilise l'intelligence artificielle pour rendre le livre de l'Apocalypse accessible et applicable à la vie quotidienne.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed">
+                                Notre objectif est de transformer l'étude biblique d'une lecture passive en un dialogue interactif et personnalisé.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-secondary">Fonctionnalités</h3>
+                            <ul class="text-gray-300 space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-robot text-primary mr-3"></i>
+                                    Chat IA spécialisé sur l'Apocalypse
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-images text-primary mr-3"></i>
+                                    Guide complet des symboles et visions
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-pray text-primary mr-3"></i>
+                                    "Steps of Faith" personnalisés
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-book text-primary mr-3"></i>
+                                    Références bibliques contextuelles
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Symbols data
+        const symbols = [
+            {
+                id: 1,
+                title: "Les 7 Chandeliers d'Or",
+                reference: "Apocalypse 1:12-20",
+                category: "christ",
+                icon: "🕯️",
+                meaning: "Les sept chandeliers d'or représentent les sept églises d'Asie Mineure et symbolisent la présence de Jésus-Christ au milieu de son peuple. Chaque chandelier émet sa propre lumière, mais cette lumière vient d'une seule source - Christ lui-même.",
+                context: "Cette vision s'inscrit dans la tradition des symboles de lumière dans l'Ancien Testament, particulièrement le chandelier à sept branches du temple. Le nombre sept symbolise la perfection et la plénitude, indiquant que Christ est présent dans toute son Église.",
+                application: "Cette vision nous rappelle que Christ marche au milieu de son Église aujourd'hui. Il connaît nos situations, nos luttes et nos victoires. En tant que croyants, nous sommes appelés à être des porteurs de lumière dans un monde obscurci."
+            },
+            {
+                id: 2,
+                title: "Le Fils de l'Homme",
+                reference: "Apocalypse 1:13-16",
+                category: "christ",
+                icon: "👑",
+                meaning: "La vision de Christ glorifié, vêtu d'une longue robe, avec une ceinture d'or, des yeux comme une flamme de feu, et une voix comme le bruit des grandes eaux.",
+                context: "Cette description combine des éléments des visions de Daniel et d'Ézéchiel, présentant Christ comme le juge suprême et le souverain sacrificateur.",
+                application: "Cette vision de Christ nous rappelle sa seigneurie absolue et son autorité sur toutes choses, y compris sur nos vies personnelles."
+            },
+            {
+                id: 3,
+                title: "Les 4 Cavaliers",
+                reference: "Apocalypse 6:1-8",
+                category: "judgment",
+                icon: "🐎",
+                meaning: "Quatre cavaliers représentant la conquête, la guerre, la famine et la mort, libérés par l'ouverture des quatre premiers sceaux.",
+                context: "Ces cavaliers symbolisent les jugements divins qui précèdent le retour du Christ, rappelant les jugements similaires dans les prophéties de Zacharie.",
+                application: "Un appel à la vigilance et à la fidélité en période de troubles et d'incertitude mondiale."
+            },
+            {
+                id: 4,
+                title: "La Nouvelle Jérusalem",
+                reference: "Apocalypse 21:1-27",
+                category: "hope",
+                icon: "🏙️",
+                meaning: "La cité céleste descendant du ciel, préparée comme une épouse parée pour son époux, symbolisant la communion éternelle entre Dieu et son peuple.",
+                context: "L'accomplissement ultime de toutes les promesses de Dieu, où il habitera avec son peuple et essuiera toute larme de leurs yeux.",
+                application: "Une espérance vivante qui transforme notre perspective sur les épreuves présentes et nous oriente vers l'éternité."
+            },
+            {
+                id: 5,
+                title: "Les 144,000",
+                reference: "Apocalypse 7:1-8",
+                category: "hope",
+                icon: "🔢",
+                meaning: "144,000 serviteurs de Dieu scellés sur leur front, représentant l'Israël de Dieu dans sa totalité.",
+                context: "Symbolise la protection divine sur le peuple de Dieu durant les jugements et sa consécration complète au service du Seigneur.",
+                application: "Un rappel de notre identité en Christ et de la sécurité éternelle que nous avons en lui."
+            },
+            {
+                id: 6,
+                title: "La Bête de la Mer",
+                reference: "Apocalypse 13:1-10",
+                category: "judgment",
+                icon: "🐉",
+                meaning: "Une bête montant de la mer, recevant son pouvoir du dragon, symbolisant les systèmes politiques opposés à Dieu.",
+                context: "Représente l'opposition mondiale à Dieu et à son peuple, culminant dans la persécution des croyants.",
+                application: "Un appel à discerner les esprits et à rester fidèle à Christ face aux pressions du monde."
+            },
+            {
+                id: 7,
+                title: "La Femme et le Dragon",
+                reference: "Apocalypse 12:1-17",
+                category: "judgment",
+                icon: "👸",
+                meaning: "Une femme couronnée d'étoiles, poursuivie par un dragon rouge, symbolisant le peuple de Dieu et la persécution satanique.",
+                context: "Représente la lutte cosmique entre le peuple de Dieu et les forces du mal à travers l'histoire.",
+                application: "Un encouragement à persévérer dans la foi, sachant que Dieu protège son peuple."
+            },
+            {
+                id: 8,
+                title: "L'Agneau Immolé",
+                reference: "Apocalypse 5:6-14",
+                category: "christ",
+                icon: "🐑",
+                meaning: "Un agneau qui semble avoir été immolé, debout au milieu du trône, symbolisant le Christ crucifié et ressuscité.",
+                context: "L'agneau représente le sacrifice de Christ qui seul est digne d'ouvrir le livre scellé de la rédemption.",
+                application: "Une invitation à adorer Christ pour son sacrifice rédempteur et sa seigneurie souveraine."
+            }
+        ];
+
+        let currentSymbolIndex = 0;
+        let currentFilter = 'all';
+
+        // Page navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(`${pageName}-page`);
+            targetPage.classList.remove('hidden');
+            targetPage.classList.add('active');
+            
+            // Update navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active', 'text-primary');
+                link.classList.add('text-gray-300');
+            });
+            
+            // Activate current nav link
+            const activeLink = document.querySelector(`[data-page="${pageName}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active', 'text-primary');
+                activeLink.classList.remove('text-gray-300');
+            }
+            
+            // Initialize symbols gallery if showing symbols page
+            if (pageName === 'symbols') {
+                initializeSymbolsGallery();
+            }
+        }
+
+        // Initialize symbols gallery
+        function initializeSymbolsGallery() {
+            const grid = document.getElementById('symbols-grid');
+            grid.innerHTML = '';
+            
+            const filteredSymbols = currentFilter === 'all' 
+                ? symbols 
+                : symbols.filter(symbol => symbol.category === currentFilter);
+            
+            filteredSymbols.forEach((symbol, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-card-dark rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer';
+                card.onclick = () => showSymbolDetail(index);
+                
+                card.innerHTML = `
+                    <div class="h-32 bg-gradient-to-r from-primary to-purple-700 flex items-center justify-center">
+                        <span class="text-4xl">${symbol.icon}</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">${symbol.title}</h3>
+                        <p class="text-primary text-sm mb-3">${symbol.reference}</p>
+                        <span class="inline-block px-3 py-1 bg-gray-700 rounded-full text-xs">
+                            ${getCategoryName(symbol.category)}
+                        </span>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Get category name
+        function getCategoryName(category) {
+            const categories = {
+                'christ': 'Vision de Christ',
+                'judgment': 'Jugements',
+                'hope': 'Espérance'
+            };
+            return categories[category] || category;
+        }
+
+        // Filter symbols
+        function filterSymbols(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary');
+                btn.classList.add('bg-gray-700');
+            });
+            event.target.classList.add('active', 'bg-primary');
+            event.target.classList.remove('bg-gray-700');
+            initializeSymbolsGallery();
+        }
+
+        // Show symbol detail
+        function showSymbolDetail(index) {
+            currentSymbolIndex = index;
+            const symbol = symbols[index];
+            
+            document.getElementById('detail-title').textContent = symbol.title;
+            document.getElementById('detail-reference').textContent = symbol.reference;
+            document.getElementById('detail-icon').textContent = symbol.icon;
+            
+            document.getElementById('meaning-content').textContent = symbol.meaning;
+            document.getElementById('context-content').textContent = symbol.context;
+            document.getElementById('application-content').textContent = symbol.application;
+            
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            document.getElementById('next-btn').disabled = index === symbols.length - 1;
+            
+            showPage('symbol-detail');
+        }
+
+        // Navigate between symbols
+        function navigateSymbol(direction) {
+            const newIndex = currentSymbolIndex + direction;
+            if (newIndex >= 0 && newIndex < symbols.length) {
+                showSymbolDetail(newIndex);
+            }
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-gray-400');
+            });
+            
+            event.target.classList.add('active', 'border-primary', 'text-primary');
+            event.target.classList.remove('border-transparent', 'text-gray-400');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.add('hidden');
+                pane.classList.remove('active');
+            });
+            
+            document.getElementById(`${tabName}-tab`).classList.remove('hidden');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+        }
+
+        // Read passage function
+        function readPassage() {
+            const symbol = symbols[currentSymbolIndex];
+            alert(`Ouverture du passage biblique: ${symbol.reference}`);
+            // In a real app, this would open a Bible reader or show the passage
+        }
+
+        // Discuss with Shema function
+        function discussWithShema() {
+            const symbol = symbols[currentSymbolIndex];
+            showPage('chat');
+            // In a real app, this would pre-fill the chat with context about the symbol
+            setTimeout(() => {
+                const input = document.querySelector('.chat-input input');
+                input.value = `Je veux explorer le symbolisme de ${symbol.title}`;
+                // sendMessage(); // You would call your send message function here
+            }, 500);
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize symbols gallery
+            initializeSymbolsGallery();
+            
+            // Navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    showPage(page);
+                });
+            });
+            
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    filterSymbols(filter);
+                });
+            });
+            
+            // Tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tab = this.getAttribute('data-tab');
+                    showTab(tab);
+                });
+            });
+            
+            // Chat send button
+            document.querySelector('.chat-input button').addEventListener('click', function() {
+                const input = document.querySelector('.chat-input input');
+                const message = input.value.trim();
+                
+                if (message) {
+                    // Add your chat functionality here
+                    console.log('Sending message:', message);
+                    input.value = '';
+                }
+            });
+        });
+
+        // Make functions globally available for onclick attributes
+        window.showPage = showPage;
+        window.filterSymbols = filterSymbols;
+        window.showSymbolDetail = showSymbolDetail;
+        window.navigateSymbol = navigateSymbol;
+        window.showTab = showTab;
+        window.readPassage = readPassage;
+        window.discussWithShema = discussWithShema;
+    </script>
+</body>
+</html>
