@@ -304,6 +304,243 @@
             transform: translateY(-2px);
         }
         
+        /* Symbols Gallery Page */
+        .symbols-header {
+            padding: 16px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            background: rgba(30, 30, 40, 0.9);
+        }
+        
+        .symbols-subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            border-radius: 15px;
+            border: 1px solid #444;
+            background: #333;
+            color: #aaa;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active {
+            background: #6c5ce7;
+            color: white;
+            border-color: #6c5ce7;
+        }
+        
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 8px;
+        }
+        
+        .symbol-card {
+            background: rgba(40, 40, 50, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #444;
+        }
+        
+        .symbol-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+        }
+        
+        .symbol-image {
+            height: 120px;
+            background: linear-gradient(135deg, #6c5ce7 0%, #4a3fb5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+        }
+        
+        .symbol-content {
+            padding: 12px;
+        }
+        
+        .symbol-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        
+        .symbol-reference {
+            font-size: 11px;
+            color: #6c5ce7;
+            margin-bottom: 8px;
+        }
+        
+        .symbol-category {
+            display: inline-block;
+            padding: 2px 8px;
+            background: rgba(108, 92, 231, 0.2);
+            color: #a29bfe;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+        
+        /* Symbol Detail Page */
+        .detail-header {
+            padding: 16px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(30, 30, 40, 0.9);
+        }
+        
+        .back-btn {
+            background: none;
+            border: none;
+            color: #6c5ce7;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .symbol-hero {
+            height: 200px;
+            background: linear-gradient(135deg, #6c5ce7 0%, #4a3fb5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            position: relative;
+        }
+        
+        .symbol-reference-large {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        
+        .read-passage-btn {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0, 184, 148, 0.9);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #333;
+            background: rgba(30, 30, 40, 0.9);
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            background: none;
+            border: none;
+            color: #aaa;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            color: #6c5ce7;
+            border-bottom-color: #6c5ce7;
+        }
+        
+        .tab-content {
+            padding: 16px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
+        .tab-pane h3 {
+            margin-bottom: 12px;
+            color: #6c5ce7;
+        }
+        
+        .tab-pane p {
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: #ddd;
+        }
+        
+        .discuss-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, #6c5ce7 0%, #4a3fb5 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+        
+        .detail-navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 16px;
+            border-top: 1px solid #333;
+            background: rgba(30, 30, 40, 0.9);
+        }
+        
+        .nav-button {
+            background: none;
+            border: 1px solid #444;
+            color: #aaa;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
         /* Animation for page transitions */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -342,6 +579,14 @@
             .app-subtitle {
                 font-size: 16px;
                 margin-bottom: 32px;
+            }
+            
+            .symbol-image {
+                height: 100px;
+            }
+            
+            .symbol-hero {
+                height: 150px;
             }
         }
     </style>
@@ -419,6 +664,74 @@
             </div>
         </div>
         
+        <!-- Symbols Gallery Page -->
+        <div class="page" id="symbols-page">
+            <div class="symbols-header">Symboles & Visions</div>
+            <div class="symbols-subtitle">Explorez les images marquantes du livre de l'Apocalypse</div>
+            
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterSymbols('all')">Tous</button>
+                <button class="filter-btn" onclick="filterSymbols('christ')">Vision de Christ</button>
+                <button class="filter-btn" onclick="filterSymbols('judgment')">Jugements</button>
+                <button class="filter-btn" onclick="filterSymbols('hope')">Espérance</button>
+            </div>
+            
+            <div class="symbols-grid" id="symbols-grid">
+                <!-- Symbols will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Symbol Detail Page -->
+        <div class="page" id="symbol-detail-page">
+            <div class="detail-header">
+                <button class="back-btn" onclick="showPage('symbols-page')">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="detail-title" id="detail-title">Les 7 Chandeliers d'Or</div>
+            </div>
+            
+            <div class="symbol-hero" id="detail-hero">
+                <div class="read-passage-btn" onclick="readPassage()">Lire le passage</div>
+                <div class="symbol-reference-large" id="detail-reference">Apocalypse 1:12-20</div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('meaning')">📖 Signification</button>
+                <button class="tab" onclick="showTab('context')">🔍 Contexte</button>
+                <button class="tab" onclick="showTab('application')">💭 Application</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="meaning-pane">
+                    <h3>Signification Théologique</h3>
+                    <p id="meaning-content">Les sept chandeliers d'or représentent les sept églises d'Asie Mineure et symbolisent la présence de Jésus-Christ au milieu de son peuple. Chaque chandelier émet sa propre lumière, mais cette lumière vient d'une seule source - Christ lui-même.</p>
+                </div>
+                
+                <div class="tab-pane" id="context-pane">
+                    <h3>Contexte Historique et Biblique</h3>
+                    <p id="context-content">Cette vision s'inscrit dans la tradition des symboles de lumière dans l'Ancien Testament, particulièrement le chandelier à sept branches du temple. Le nombre sept symbolise la perfection et la plénitude, indiquant que Christ est présent dans toute son Église.</p>
+                </div>
+                
+                <div class="tab-pane" id="application-pane">
+                    <h3>Application Personnelle</h3>
+                    <p id="application-content">Cette vision nous rappelle que Christ marche au milieu de son Église aujourd'hui. Il connaît nos situations, nos luttes et nos victoires. En tant que croyants, nous sommes appelés à être des porteurs de lumière dans un monde obscurci.</p>
+                    <button class="discuss-btn" onclick="discussWithShema()">Discuter de ce symbole avec Shema</button>
+                </div>
+            </div>
+            
+            <div class="detail-navigation">
+                <button class="nav-button" id="prev-btn" onclick="navigateSymbol(-1)">
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <button class="nav-button" onclick="showPage('symbols-page')">
+                    Retour à la galerie
+                </button>
+                <button class="nav-button" id="next-btn" onclick="navigateSymbol(1)">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
         <!-- Home Indicator -->
         <div class="home-indicator"></div>
         
@@ -427,6 +740,10 @@
             <button class="nav-btn active" onclick="showPage('chat-page')">
                 <i class="fas fa-comment-dots"></i>
                 <span>Chat</span>
+            </button>
+            <button class="nav-btn" onclick="showPage('symbols-page')">
+                <i class="fas fa-images"></i>
+                <span>Symboles</span>
             </button>
             <button class="nav-btn" onclick="showPage('signin-page')">
                 <i class="fas fa-user"></i>
@@ -440,6 +757,73 @@
     </div>
 
     <script>
+        // Symbols data
+        const symbols = [
+            {
+                id: 1,
+                title: "Les 7 Chandeliers d'Or",
+                reference: "Apocalypse 1:12-20",
+                category: "christ",
+                icon: "🕯️",
+                meaning: "Les sept chandeliers d'or représentent les sept églises d'Asie Mineure et symbolisent la présence de Jésus-Christ au milieu de son peuple. Chaque chandelier émet sa propre lumière, mais cette lumière vient d'une seule source - Christ lui-même.",
+                context: "Cette vision s'inscrit dans la tradition des symboles de lumière dans l'Ancien Testament, particulièrement le chandelier à sept branches du temple. Le nombre sept symbolise la perfection et la plénitude, indiquant que Christ est présent dans toute son Église.",
+                application: "Cette vision nous rappelle que Christ marche au milieu de son Église aujourd'hui. Il connaît nos situations, nos luttes et nos victoires. En tant que croyants, nous sommes appelés à être des porteurs de lumière dans un monde obscurci."
+            },
+            {
+                id: 2,
+                title: "Le Fils de l'Homme",
+                reference: "Apocalypse 1:13-16",
+                category: "christ",
+                icon: "👑",
+                meaning: "La vision de Christ glorifié, vêtu d'une longue robe, avec une ceinture d'or, des yeux comme une flamme de feu, et une voix comme le bruit des grandes eaux.",
+                context: "Cette description combine des éléments des visions de Daniel et d'Ézéchiel, présentant Christ comme le juge suprême et le souverain sacrificateur.",
+                application: "Cette vision de Christ nous rappelle sa seigneurie absolue et son autorité sur toutes choses, y compris sur nos vies personnelles."
+            },
+            {
+                id: 3,
+                title: "Les 4 Cavaliers",
+                reference: "Apocalypse 6:1-8",
+                category: "judgment",
+                icon: "🐎",
+                meaning: "Quatre cavaliers représentant la conquête, la guerre, la famine et la mort, libérés par l'ouverture des quatre premiers sceaux.",
+                context: "Ces cavaliers symbolisent les jugements divins qui précèdent le retour du Christ, rappelant les jugements similaires dans les prophéties de Zacharie.",
+                application: "Un appel à la vigilance et à la fidélité en période de troubles et d'incertitude mondiale."
+            },
+            {
+                id: 4,
+                title: "La Nouvelle Jérusalem",
+                reference: "Apocalypse 21:1-27",
+                category: "hope",
+                icon: "🏙️",
+                meaning: "La cité céleste descendant du ciel, préparée comme une épouse parée pour son époux, symbolisant la communion éternelle entre Dieu et son peuple.",
+                context: "L'accomplissement ultime de toutes les promesses de Dieu, où il habitera avec son peuple et essuiera toute larme de leurs yeux.",
+                application: "Une espérance vivante qui transforme notre perspective sur les épreuves présentes et nous oriente vers l'éternité."
+            },
+            {
+                id: 5,
+                title: "Les 144,000",
+                reference: "Apocalypse 7:1-8",
+                category: "hope",
+                icon: "🔢",
+                meaning: "144,000 serviteurs de Dieu scellés sur leur front, représentant l'Israël de Dieu dans sa totalité.",
+                context: "Symbolise la protection divine sur le peuple de Dieu durant les jugements et sa consécration complète au service du Seigneur.",
+                application: "Un rappel de notre identité en Christ et de la sécurité éternelle que nous avons en lui."
+            },
+            {
+                id: 6,
+                title: "La Bête de la Mer",
+                reference: "Apocalypse 13:1-10",
+                category: "judgment",
+                icon: "🐉",
+                meaning: "Une bête montant de la mer, recevant son pouvoir du dragon, symbolisant les systèmes politiques opposés à Dieu.",
+                context: "Représente l'opposition mondiale à Dieu et à son peuple, culminant dans la persécution des croyants.",
+                application: "Un appel à discerner les esprits et à rester fidèle à Christ face aux pressions du monde."
+            }
+        ];
+
+        let currentSymbolIndex = 0;
+        let currentFilter = 'all';
+
         // Function to switch between pages
         function showPage(pageId) {
             // Hide all pages
@@ -456,9 +840,134 @@
             });
             
             // Activate the clicked button
-            event.currentTarget.classList.add('active');
+            if (pageId === 'symbols-page') {
+                document.querySelector('.nav-btn:nth-child(2)').classList.add('active');
+            } else if (pageId === 'chat-page') {
+                document.querySelector('.nav-btn:nth-child(1)').classList.add('active');
+            } else if (pageId === 'signin-page') {
+                document.querySelector('.nav-btn:nth-child(3)').classList.add('active');
+            } else if (pageId === 'appname-page') {
+                document.querySelector('.nav-btn:nth-child(4)').classList.add('active');
+            }
+            
+            // Initialize symbols gallery if showing symbols page
+            if (pageId === 'symbols-page') {
+                initializeSymbolsGallery();
+            }
         }
-        
+
+        // Initialize symbols gallery
+        function initializeSymbolsGallery() {
+            const grid = document.getElementById('symbols-grid');
+            grid.innerHTML = '';
+            
+            const filteredSymbols = currentFilter === 'all' 
+                ? symbols 
+                : symbols.filter(symbol => symbol.category === currentFilter);
+            
+            filteredSymbols.forEach((symbol, index) => {
+                const card = document.createElement('div');
+                card.className = 'symbol-card';
+                card.onclick = () => showSymbolDetail(index);
+                
+                card.innerHTML = `
+                    <div class="symbol-image">
+                        ${symbol.icon}
+                    </div>
+                    <div class="symbol-content">
+                        <div class="symbol-title">${symbol.title}</div>
+                        <div class="symbol-reference">${symbol.reference}</div>
+                        <span class="symbol-category">${getCategoryName(symbol.category)}</span>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Get category name
+        function getCategoryName(category) {
+            const categories = {
+                'christ': 'Vision de Christ',
+                'judgment': 'Jugements',
+                'hope': 'Espérance'
+            };
+            return categories[category] || category;
+        }
+
+        // Filter symbols
+        function filterSymbols(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            initializeSymbolsGallery();
+        }
+
+        // Show symbol detail
+        function showSymbolDetail(index) {
+            currentSymbolIndex = index;
+            const symbol = symbols[index];
+            
+            document.getElementById('detail-title').textContent = symbol.title;
+            document.getElementById('detail-reference').textContent = symbol.reference;
+            document.getElementById('detail-hero').innerHTML = `
+                <div class="read-passage-btn" onclick="readPassage()">Lire le passage</div>
+                <div class="symbol-reference-large">${symbol.reference}</div>
+                <div style="font-size: 48px;">${symbol.icon}</div>
+            `;
+            
+            document.getElementById('meaning-content').textContent = symbol.meaning;
+            document.getElementById('context-content').textContent = symbol.context;
+            document.getElementById('application-content').textContent = symbol.application;
+            
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            document.getElementById('next-btn').disabled = index === symbols.length - 1;
+            
+            showPage('symbol-detail-page');
+        }
+
+        // Navigate between symbols
+        function navigateSymbol(direction) {
+            const newIndex = currentSymbolIndex + direction;
+            if (newIndex >= 0 && newIndex < symbols.length) {
+                showSymbolDetail(newIndex);
+            }
+        }
+
+        // Show tab content
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+            document.getElementById(`${tabName}-pane`).classList.add('active');
+        }
+
+        // Read passage function
+        function readPassage() {
+            alert(`Ouverture du passage: ${symbols[currentSymbolIndex].reference}`);
+            // In a real app, this would open a Bible reader
+        }
+
+        // Discuss with Shema function
+        function discussWithShema() {
+            const symbol = symbols[currentSymbolIndex];
+            showPage('chat-page');
+            // In a real app, this would pre-fill the chat with context about the symbol
+            setTimeout(() => {
+                const input = document.querySelector('.chat-input input');
+                input.value = `Je veux explorer le symbolisme de ${symbol.title}`;
+                sendMessage();
+            }, 500);
+        }
+
         // Send message functionality
         document.querySelector('.chat-input button').addEventListener('click', sendMessage);
         document.querySelector('.chat-input input').addEventListener('keypress', function(e) {
@@ -514,7 +1023,11 @@
         // Get started button
         document.querySelector('.get-started-button').addEventListener('click', function() {
             showPage('signin-page');
-            document.querySelector('.nav-btn:nth-child(2)').click();
+        });
+
+        // Initialize the symbols gallery on load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSymbolsGallery();
         });
     </script>
 </body>
