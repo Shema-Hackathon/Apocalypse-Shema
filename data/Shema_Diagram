@@ -1,0 +1,43 @@
+@startmindmap
+* Apocalypse Shema
+** User Interaction Layer
+*** Mobile/Web Application
+** AI Conversation Processing
+*** User Input
+**** Biblical Questions
+**** Personal Context
+**** Emotional State
+**** Passage Selection
+*** AI Analysis Engine
+**** Context Understanding
+**** Symbol Recognition
+**** Theological Verification
+**** Emotional Analysis
+*** Response Generation
+**** Symbol Explanation
+**** Reflective Questions
+**** Biblical References
+**** Step of Faith Creation
+** Knowledge & Processing Layers
+*** Theological Database
+**** Symbol Definitions
+**** Biblical Cross-references
+**** Historical Context
+**** Doctrinal Safeguards
+*** AI Model Core
+**** GPT-4/Llama Integration
+**** LangChain Orchestration
+**** Prompt Management
+**** Response Validation
+*** Content Delivery
+**** Personalized Guidance
+**** Interactive Dialogue
+**** Actionable Steps
+**** Progress Tracking
+** Output & Transformation
+*** User receives:
+**** Biblical Understanding
+**** Personal Application
+**** Spiritual Growth Tracking
+**** Faith in Action
+@endmindmap
