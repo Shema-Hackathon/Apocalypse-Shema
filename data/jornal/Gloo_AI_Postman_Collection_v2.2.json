@@ -1,0 +1,332 @@
+{
+  "info": {
+    "_postman_id": "e2c9c4a0-8d6a-4c44-9c8e-collection-gloo-ai-v2-2",
+    "name": "Gloo AI \u2014 Chat Completions (Stateless) + OAuth2 (v2.2)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection Postman : Auth, Completions (non\u2011stream + SSE), Table Examples, Legacy Chat (non\u2011GA)."
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Get OAuth Token (client_credentials)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{BASE}}/oauth2/token",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "oauth2",
+                "token"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "text"
+                },
+                {
+                  "key": "scope",
+                  "value": "api/access",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "R\u00e9cup\u00e8re un access_token OAuth2 (client_credentials)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const res = pm.response.json();",
+                  "pm.collectionVariables.set('access_token', res.access_token);",
+                  "pm.collectionVariables.set('token_type', res.token_type || 'Bearer');",
+                  "pm.collectionVariables.set('expires_in', String(res.expires_in || ''));",
+                  "pm.collectionVariables.set('token_received_at', new Date().toISOString());",
+                  "pm.test('Got access_token', function(){ pm.expect(res).to.have.property('access_token'); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chat Completions (Official / Stateless)",
+      "item": [
+        {
+          "name": "Non-Streaming Completion",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat/completions",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat",
+                "completions"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"{{MODEL}}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Explain the seven seals in two concise sentences.\"\n    }\n  ],\n  \"max_tokens\": 512,\n  \"temperature\": 0.7,\n  \"stream\": false\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function(){ pm.response.to.have.status(200); });",
+                  "const data = pm.response.json();",
+                  "pm.collectionVariables.set('last_completion_text', data?.choices?.[0]?.message?.content || '');"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Streaming Completion (SSE) \u2014 may not render in Postman",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "text/event-stream"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat/completions",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat",
+                "completions"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"{{MODEL}}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Provide three short cross-references for the four horsemen.\"\n    }\n  ],\n  \"stream\": true,\n  \"temperature\": 0.5\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Table Examples",
+      "item": [
+        {
+          "name": "Send Chat Message (Completions \u2014 WORKS)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat/completions",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat",
+                "completions"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"{{MODEL}}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Explain the seven seals in two sentences.\"\n    }\n  ],\n  \"max_tokens\": 1024,\n  \"stream\": false,\n  \"temperature\": 0.7\n}"
+            },
+            "description": "Correspond exactement au tableau \u201cbon endpoint\u201d du README."
+          }
+        },
+        {
+          "name": "Send Chat Message (Legacy Chat \u2014 NOT GA, messages: [])",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"Votre question sur l'Apocalypse...\"\n}"
+            },
+            "description": "Reproduit la config du tableau \u201clegacy\u201d. \u00c0 n\u2019utiliser que pour diagnostic."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Experimental / Not GA (use with caution)",
+      "item": [
+        {
+          "name": "Create Chat (experimental)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"{{MODEL}}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Hello experimental chat!\"\n    }\n  ]\n}"
+            }
+          }
+        },
+        {
+          "name": "Get Chat by chat_id (experimental)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/ai/v1/chat?chat_id={{CHAT_ID}}",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "ai",
+                "v1",
+                "chat"
+              ],
+              "query": [
+                {
+                  "key": "chat_id",
+                  "value": "{{CHAT_ID}}"
+                }
+              ]
+            },
+            "description": "Attendu: messages: []. Non\u2011GA."
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE",
+      "value": "https://platform.ai.gloo.com"
+    },
+    {
+      "key": "CLIENT_ID",
+      "value": ""
+    },
+    {
+      "key": "CLIENT_SECRET",
+      "value": ""
+    },
+    {
+      "key": "MODEL",
+      "value": "us.meta.llama3-3-70b-instruct-v1:0"
+    },
+    {
+      "key": "CHAT_ID",
+      "value": ""
+    }
+  ]
+}

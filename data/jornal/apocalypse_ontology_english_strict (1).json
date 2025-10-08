@@ -1,0 +1,430 @@
+[
+  {
+    "id": "SYM-0001",
+    "term": "Agneau",
+    "type": "image",
+    "aliases": [
+      "Lamb",
+      "Slain Lamb"
+    ],
+    "category": "Christology",
+    "refs": [
+      "Ap 5:6-14",
+      "Ap 7:17",
+      "Ap 21:22-23"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lamb.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lamb.svg",
+    "cross_links": [
+      "SYM-0007",
+      "SYM-0009"
+    ],
+    "score_boost": 2.0,
+    "source_notes": "Interprétation classique; cf. Apocalypse 5",
+    "status": "published",
+    "meanings": [
+      "Christ sacrificed and victorious"
+    ]
+  },
+  {
+    "id": "SYM-0002",
+    "term": "Dragon",
+    "type": "symbol",
+    "aliases": [
+      "great dragon",
+      "red dragon"
+    ],
+    "category": "Adversary",
+    "refs": [
+      "Ap 12:3-9",
+      "Ap 20:2"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/dragon.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/dragon.svg",
+    "cross_links": [
+      "SYM-0003",
+      "SYM-0004"
+    ],
+    "score_boost": 2.5,
+    "source_notes": "Identifié explicitement en Ap 12:9",
+    "status": "published",
+    "meanings": [
+      "Satan"
+    ]
+  },
+  {
+    "id": "SYM-0003",
+    "term": "Beast of the sea",
+    "type": "symbol",
+    "aliases": [
+      "first beast"
+    ],
+    "category": "Political Power",
+    "refs": [
+      "Ap 13:1-10"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/beast_sea.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/beast_sea.svg",
+    "cross_links": [
+      "SYM-0002",
+      "SYM-0004"
+    ],
+    "score_boost": 1.8,
+    "source_notes": "Voir parallèles Daniel 7",
+    "status": "published",
+    "meanings": [
+      "Persecuting political power"
+    ]
+  },
+  {
+    "id": "SYM-0004",
+    "term": "Beast of the earth",
+    "type": "symbol",
+    "aliases": [
+      "false prophet",
+      "second beast"
+    ],
+    "category": "Religious Deception",
+    "refs": [
+      "Ap 13:11-18",
+      "Ap 19:20"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/beast_earth.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/beast_earth.svg",
+    "cross_links": [
+      "SYM-0003"
+    ],
+    "score_boost": 1.8,
+    "source_notes": "Associée aux prodiges trompeurs",
+    "status": "published",
+    "meanings": [
+      "False prophet; religious deception"
+    ]
+  },
+  {
+    "id": "SYM-0005",
+    "term": "666 (mark of the beast)",
+    "type": "symbol",
+    "aliases": [
+      "mark on the hand",
+      "mark on the forehead"
+    ],
+    "category": "Mark/Allegiance",
+    "refs": [
+      "Ap 13:16-18",
+      "Ap 14:9-11"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/mark_666.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/mark_666.svg",
+    "cross_links": [
+      "SYM-0003",
+      "SYM-0004"
+    ],
+    "score_boost": 1.9,
+    "source_notes": "Numéro d'homme, 666",
+    "status": "published",
+    "meanings": [
+      "Ultimate imperfection; allegiance to the beast"
+    ]
+  },
+  {
+    "id": "SYM-0006",
+    "term": "Woman clothed with the sun",
+    "type": "image",
+    "aliases": [
+      "woman",
+      "woman crowned with twelve stars"
+    ],
+    "category": "People of God",
+    "refs": [
+      "Ap 12:1-6"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/woman_sun.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/woman_sun.svg",
+    "cross_links": [
+      "SYM-0002"
+    ],
+    "score_boost": 1.7,
+    "source_notes": "Imagerie cosmique, Ap 12",
+    "status": "published",
+    "meanings": [
+      "People of God (views: Israel / Church)"
+    ]
+  },
+  {
+    "id": "SYM-0007",
+    "term": "Sceaux (sept sceaux)",
+    "type": "symbol",
+    "aliases": [
+      "sealed book",
+      "scroll with seven seals"
+    ],
+    "category": "Judgments",
+    "refs": [
+      "Ap 5:1-5",
+      "Ap 6",
+      "Ap 8:1"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/seals.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/seals.svg",
+    "cross_links": [
+      "SYM-0008",
+      "SYM-0009"
+    ],
+    "score_boost": 1.6,
+    "source_notes": "Déclenchés par l’Agneau",
+    "status": "published",
+    "meanings": [
+      "Series of progressive judgments"
+    ]
+  },
+  {
+    "id": "SYM-0008",
+    "term": "Trompettes (sept trompettes)",
+    "type": "symbol",
+    "aliases": [
+      "trumpets of judgment"
+    ],
+    "category": "Judgments",
+    "refs": [
+      "Ap 8–9",
+      "Ap 11:15"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/trumpets.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/trumpets.svg",
+    "cross_links": [
+      "SYM-0007",
+      "SYM-0009"
+    ],
+    "score_boost": 1.5,
+    "source_notes": "Sept anges avec sept trompettes",
+    "status": "published",
+    "meanings": [
+      "Warning judgments series"
+    ]
+  },
+  {
+    "id": "SYM-0009",
+    "term": "Coupes (sept coupes)",
+    "type": "symbol",
+    "aliases": [
+      "bowls of wrath"
+    ],
+    "category": "Judgments",
+    "refs": [
+      "Ap 15–16"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/bowls.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/bowls.svg",
+    "cross_links": [
+      "SYM-0007",
+      "SYM-0008"
+    ],
+    "score_boost": 1.5,
+    "source_notes": "Colère de Dieu complétée",
+    "status": "published",
+    "meanings": [
+      "Final outpoured judgments"
+    ]
+  },
+  {
+    "id": "SYM-0010",
+    "term": "New Jerusalem",
+    "type": "image",
+    "aliases": [
+      "heavenly Jerusalem",
+      "the holy city"
+    ],
+    "category": "Eschatology",
+    "refs": [
+      "Ap 21–22"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/new_jerusalem.svg"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/new_jerusalem.svg",
+    "cross_links": [
+      "SYM-0001"
+    ],
+    "score_boost": 1.7,
+    "source_notes": "Pierre précieuses, or, gloire de Dieu",
+    "status": "published",
+    "meanings": [
+      "Eternal dwelling of the redeemed"
+    ]
+  },
+  {
+    "id": "SYM-0101",
+    "term": "Stars",
+    "type": "image",
+    "aliases": [
+      "stars"
+    ],
+    "category": "Celestial Objects",
+    "refs": [
+      "Ap 6:13",
+      "Ap 12:4"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/stars.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/stars.png",
+    "meanings": [
+      "Heavenly hosts, angels, spiritual authorities"
+    ]
+  },
+  {
+    "id": "SYM-0102",
+    "term": "Soleil",
+    "type": "image",
+    "aliases": [
+      "sun"
+    ],
+    "category": "Celestial Objects",
+    "refs": [
+      "Ap 12:1",
+      "Ap 21:23"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/sun.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/sun.png",
+    "meanings": [
+      "Light, righteousness, glory of God"
+    ]
+  },
+  {
+    "id": "SYM-0201",
+    "term": "Lion",
+    "type": "image",
+    "aliases": [
+      "Lion of Judah"
+    ],
+    "category": "Living Beings",
+    "refs": [
+      "Ap 5:5"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lion.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lion.png",
+    "meanings": [
+      "Strength, Christ (Lion of Judah)"
+    ]
+  },
+  {
+    "id": "SYM-0301",
+    "term": "Mer",
+    "type": "image",
+    "aliases": [
+      "sea"
+    ],
+    "category": "Natural Elements",
+    "refs": [
+      "Ap 13:1",
+      "Ap 21:1"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/sea.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/sea.png",
+    "meanings": [
+      "Chaos, peoples, nations"
+    ]
+  },
+  {
+    "id": "SYM-0401",
+    "term": "Harpes",
+    "type": "image",
+    "aliases": [
+      "harps"
+    ],
+    "category": "Worship Objects",
+    "refs": [
+      "Ap 5:8",
+      "Ap 14:2"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/harps.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/harps.png",
+    "meanings": [
+      "Heavenly praise"
+    ]
+  },
+  {
+    "id": "SYM-0501",
+    "term": "Or",
+    "type": "image",
+    "aliases": [
+      "gold"
+    ],
+    "category": "Colors and Materials",
+    "refs": [
+      "Ap 21:18"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/gold.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/gold.png",
+    "meanings": [
+      "Wealth, glory, purity"
+    ]
+  },
+  {
+    "id": "SYM-0601",
+    "term": "Babylone",
+    "type": "symbol",
+    "aliases": [
+      "Babylon"
+    ],
+    "category": "Cities and Places",
+    "refs": [
+      "Ap 17-18"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/babylon.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/babylon.png",
+    "meanings": [
+      "Corrupt world system"
+    ]
+  },
+  {
+    "id": "SYM-0701",
+    "term": "Lampes",
+    "type": "image",
+    "aliases": [
+      "lamps"
+    ],
+    "category": "Other Images",
+    "refs": [
+      "Ap 1:12,20"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lamps.png"
+    ],
+    "icon": "https://raw.githubusercontent.com/Shema-Hackathon/Apocalypse-Shema/main/images/lamps.png",
+    "meanings": [
+      "Churches, spiritual light"
+    ]
+  }
+]
