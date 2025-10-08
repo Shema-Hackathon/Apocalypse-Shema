@@ -1,0 +1,156 @@
+/* Variables couleurs thème sombre */
+:root {
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8d1;
+    --accent: #4cc9f0;
+    --accent-dark: #3a0ca3;
+    --success: #4ade80;
+    --danger: #f87171;
+}
+
+.dark-theme {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    color: var(--accent);
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 20px;
+    padding-bottom: 80px; /* Espace pour la nav */
+}
+
+.page.active {
+    display: block;
+}
+
+/* Cartes */
+.action-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Formulaire */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Grille symboles */
+.symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.symbol-card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.symbol-card:hover {
+    transform: scale(1.05);
+}
+
+.symbol-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.symbol-name {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
