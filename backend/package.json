@@ -1,0 +1,20 @@
+{
+  "name": "apocalypse-chat-backend",
+  "version": "1.1.0",
+  "description": "Backend Apocalypse Shema avec Neon PostgreSQL (auth + chat)",
+  "main": "server-new.js",
+  "scripts": {
+    "start": "node server-new.js",
+    "dev": "nodemon server-new.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
